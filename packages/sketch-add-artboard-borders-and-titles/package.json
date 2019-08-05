@@ -1,0 +1,31 @@
+{
+  "name": "sketch-add-artboard-borders-and-titles",
+  "version": "0.9.0",
+  "description": "A Sketch plugin to add borders and titles to artboards",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": "yuanqing/sketch-plugins",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "publish": "node ../../scripts/publish.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.7.2",
+    "rimraf": "^2.6.3",
+    "skpm": "^1.2.1"
+  },
+  "skpm": {
+    "main": "Add Artboard Borders and Titles.sketchplugin"
+  }
+}

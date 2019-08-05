@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Add Artboard Borders and Titles",
+  "identifier": "sg.yuanqing.add-artboard-borders-and-titles",
+  "commands": [
+    {
+      "name": "Add Artboard Borders",
+      "identifier": "sg.yuanqing.add-artboard-borders-and-titles.borders",
+      "script": "src/add-artboard-borders/add-artboard-borders.js"
+    },
+    {
+      "name": "Settings for Add Artboard Borders",
+      "identifier": "sg.yuanqing.add-artboard-borders-and-titles.borders-settings",
+      "script": "src/add-artboard-borders/settings.js"
+    },
+    {
+      "name": "Add Artboard Titles",
+      "identifier": "sg.yuanqing.add-artboard-borders-and-titles.titles",
+      "script": "src/add-artboard-titles/add-artboard-titles.js"
+    },
+    {
+      "name": "Settings for Add Artboard Titles",
+      "identifier": "sg.yuanqing.add-artboard-borders-and-titles.titles-settings",
+      "script": "src/add-artboard-titles/settings.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.add-artboard-borders-and-titles.reset-settings",
+      "script": "src/reset-settings.js"
+    }
+  ],
+  "menu": {
+    "title": "Add Artboard Borders and Titles",
+    "items": [
+      "sg.yuanqing.add-artboard-borders-and-titles.borders",
+      "sg.yuanqing.add-artboard-borders-and-titles.titles",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "sg.yuanqing.add-artboard-borders-and-titles.borders-settings",
+          "sg.yuanqing.add-artboard-borders-and-titles.titles-settings",
+          "-",
+          "sg.yuanqing.add-artboard-borders-and-titles.reset-settings"
+        ]
+      }
+    ]
+  }
+}
