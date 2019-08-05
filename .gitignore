@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+*.sketchplugin
+node_modules/
+plugin.zip
