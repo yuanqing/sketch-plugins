@@ -22,6 +22,7 @@ async function publish (type) {
   // Read configuration
   const packageJsonPath = join(process.cwd(), 'package.json')
   const { name, repository, skpm } = require(packageJsonPath)
+  const { githubUserName, repositoryName } = parseRepository(repository)
 
   // Build the plugin, create `plugin.zip`
   log.start('Building plugin')
@@ -40,7 +41,12 @@ async function publish (type) {
 
   // Update `.appcast.xml` version
   log.start('Updating .appcast.xml version')
-  await updateAppcastVersion(repository, newVersion, gitTagName)
+  await updateAppcastVersion(
+    githubUserName,
+    repositoryName,
+    newVersion,
+    gitTagName
+  )
   log.succeed('Updated .appcast.xml version')
 
   // Commit changes, tag, and push
@@ -56,7 +62,6 @@ async function publish (type) {
   log.succeed('Committed and pushed')
 
   // Create a new GitHub release, delete the `.zip`
-  const [githubUserName, repositoryName] = repository.split('/')
   log.start('Creating a GitHub release')
   await execa('github-release', [
     'upload',
@@ -74,21 +79,42 @@ async function publish (type) {
   log.start(`Deleting ${zipFileName}`)
   await execa('rm', [zipFileName])
   log.succeed(`Deleted ${zipFileName}`)
-  log.info(`https://github.com/${repository}/releases/tag/${gitTagName}`)
+  log.info(
+    `https://github.com/${githubUserName}/${repositoryName}/releases/tag/${gitTagName}`
+  )
 }
 
-async function updateAppcastVersion (repository, version, gitTagName) {
+function parseRepository (repository) {
+  const repositoryRegex = /^git:\/\/github.com\/([\w-]+)\/([\w-]+).git$/
+  const matches = repository.url.match(repositoryRegex)
+  return {
+    githubUserName: matches[1],
+    repositoryName: matches[2]
+  }
+}
+
+async function updateAppcastVersion (
+  githubUserName,
+  repositoryName,
+  version,
+  gitTagName
+) {
   const appcastXmlFilePath = join(process.cwd(), appcastXmlFileName)
   const appcastXml = await readFile(appcastXmlFilePath, 'utf8')
   const appcastJson = JSON.parse(xml2json(appcastXml, { compact: false }))
   appcastJson.elements[0].elements[0].elements.unshift(
-    createAppcastItem(repository, version, gitTagName)
+    createAppcastItem(githubUserName, repositoryName, version, gitTagName)
   )
   const result = json2xml(appcastJson, { fullTagEmptyElement: true, spaces: 2 })
   return outputFile(appcastXmlFilePath, `${result}\n`)
 }
 
-function createAppcastItem (repository, version, gitTagName) {
+function createAppcastItem (
+  githubUserName,
+  repositoryName,
+  version,
+  gitTagName
+) {
   return {
     type: 'element',
     name: 'item',
@@ -97,7 +123,7 @@ function createAppcastItem (repository, version, gitTagName) {
         type: 'element',
         name: 'enclosure',
         attributes: {
-          url: `https://github.com/${repository}/releases/download/${gitTagName}/${zipFileName}`,
+          url: `https://github.com/${githubUserName}/${repositoryName}/releases/download/${gitTagName}/${zipFileName}`,
           'sparkle:version': version
         }
       }
