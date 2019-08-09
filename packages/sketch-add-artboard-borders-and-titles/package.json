@@ -11,7 +11,8 @@
   "author": "Lim Yuan Qing",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yuanqing/sketch-plugins.git"
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-add-artboard-borders-and-titles"
   },
   "files": [
     "src"
