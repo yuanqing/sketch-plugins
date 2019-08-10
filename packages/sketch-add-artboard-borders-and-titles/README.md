@@ -1,4 +1,4 @@
-# Add Artboard Borders and Titles [![npm Version](https://badgen.net/npm/v/sketch-add-artboard-borders-and-titles)](https://www.npmjs.org/package/sketch-add-artboard-borders-and-titles)
+# Add Artboard Borders and Titles [![npm Version](https://img.shields.io/npm/v/sketch-add-artboard-borders-and-titles)](https://www.npmjs.com/package/sketch-add-artboard-borders-and-titles)
 
 > A Sketch plugin to automatically add borders and titles to artboards
 
