@@ -12,11 +12,11 @@ async function main () {
   if (typeof type === 'undefined') {
     throw new Error('Need a release type')
   }
-  await publish(type)
+  await release(type)
 }
 main()
 
-async function publish (type) {
+async function release (type) {
   const log = ora()
 
   // Read configuration
