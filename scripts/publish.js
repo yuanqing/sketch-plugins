@@ -24,6 +24,13 @@ async function publish (type) {
   const { name, repository, skpm } = require(packageJsonPath)
   const { githubUserName, repositoryName } = parseRepository(repository)
 
+  // Update `package.json` version
+  log.start('Updating package.json version')
+  const { stdout } = await execa('npm', ['version', type])
+  const newVersion = stdout.substring(1)
+  const gitTagName = `${name}-${newVersion}`
+  log.succeed('Updated package.json version')
+
   // Build the plugin, create `plugin.zip`
   log.start('Building plugin')
   await execa('npm', ['run', 'build'])
@@ -31,13 +38,6 @@ async function publish (type) {
   log.start(`Creating ${zipFileName}`)
   await execa('zip', ['-r', zipFileName, skpm.main, '-x', '.DS_Store'])
   log.succeed(`Created ${zipFileName}`)
-
-  // Update `package.json` version
-  log.start('Updating package.json version')
-  const { stdout } = await execa('npm', ['version', type])
-  const newVersion = stdout.substring(1)
-  const gitTagName = `${name}-${newVersion}`
-  log.succeed('Updated package.json version')
 
   // Update `.appcast.xml` version
   log.start('Updating .appcast.xml version')
