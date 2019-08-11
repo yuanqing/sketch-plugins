@@ -24,11 +24,6 @@
     "symlink": "skpm-link",
     "watch": "yarn run build --watch"
   },
-  "devDependencies": {
-    "@skpm/builder": "^0.7.2",
-    "rimraf": "^2.6.3",
-    "skpm": "^1.2.1"
-  },
   "skpm": {
     "main": "Add Artboard Borders and Titles.sketchplugin"
   }
