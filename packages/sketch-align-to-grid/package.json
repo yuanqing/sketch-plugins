@@ -1,0 +1,30 @@
+{
+  "name": "sketch-align-to-grid",
+  "version": "0.1.1",
+  "description": "A Sketch plugin to align artboards and layers to a grid",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-align-to-grid"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "release": "node ../../scripts/release.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "skpm": {
+    "main": "Align to Grid.sketchplugin"
+  }
+}

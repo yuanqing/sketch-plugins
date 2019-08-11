@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Align to Grid",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-align-to-grid/.appcast.xml",
+  "identifier": "sg.yuanqing.align-to-grid",
+  "commands": [
+    {
+      "name": "Align Artboards to Canvas Grid",
+      "identifier": "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid",
+      "script": "src/align-artboards-to-canvas-grid/align-artboards-to-canvas-grid.js"
+    },
+    {
+      "name": "Settings for Canvas Grid",
+      "identifier": "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid-settings",
+      "script": "src/align-artboards-to-canvas-grid/settings.js"
+    },
+    {
+      "name": "Align Layers to Artboard Grid",
+      "identifier": "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid",
+      "script": "src/align-layers-to-artboard-grid/align-layers-to-artboard-grid.js"
+    },
+    {
+      "name": "Settings for Artboard Grid",
+      "identifier": "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid-settings",
+      "script": "src/align-layers-to-artboard-grid/settings.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.align-to-grid.reset-settings",
+      "script": "src/settings/settings.js",
+      "handler": "resetSettings"
+    },
+    {
+      "name": "LayersMoved.finish",
+      "identifier": "sg.yuanqing.align-to-grid.layers-moved-finish",
+      "script": "src/action.js",
+      "handlers": {
+        "actions": {
+          "LayersMoved.finish": "default"
+        }
+      }
+    },
+    {
+      "name": "LayersResized.finish",
+      "identifier": "sg.yuanqing.align-to-grid.layers-resized-finish",
+      "script": "src/action.js",
+      "handlers": {
+        "actions": {
+          "LayersResized.finish": "default"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Align to Grid",
+    "items": [
+      "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid",
+      "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid-settings",
+          "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid-settings",
+          "-",
+          "sg.yuanqing.align-to-grid.reset-settings"
+        ]
+      }
+    ]
+  }
+}
