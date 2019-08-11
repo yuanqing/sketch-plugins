@@ -37,7 +37,7 @@ Snap to artboard grid | `false`
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-align-to-grid-0.1.1/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-align-to-grid-0.2.0/plugin.zip)
 2. Double-click `Align to Grid.sketchplugin` to install
 
 ## License
