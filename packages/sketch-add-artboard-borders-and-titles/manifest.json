@@ -26,7 +26,8 @@
     {
       "name": "Reset Settings",
       "identifier": "sg.yuanqing.add-artboard-borders-and-titles.reset-settings",
-      "script": "src/reset-settings.js"
+      "script": "src/settings.js",
+      "handler": "resetSettings"
     }
   ],
   "menu": {

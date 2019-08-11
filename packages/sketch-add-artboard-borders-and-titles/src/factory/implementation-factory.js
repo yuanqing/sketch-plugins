@@ -1,4 +1,3 @@
-import { getSettings } from '@sketch-plugin-helper/settings'
 import {
   addLayersToCurrentPage,
   getArtboardsOnCurrentPage,
@@ -6,7 +5,7 @@ import {
   showErrorMessage,
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
-import defaultSettings from '../default-settings'
+import { getSettings } from '../settings'
 
 export default function implementationFactory ({
   mapArtboards,
@@ -21,10 +20,7 @@ export default function implementationFactory ({
       showErrorMessage('No artboards')
       return
     }
-    const layers = mapArtboards(
-      artboards,
-      getSettings(defaultSettings)[settingsKey]
-    )
+    const layers = mapArtboards(artboards, getSettings()[settingsKey])
     const group = MSLayerGroup.groupWithLayers(
       MSLayerArray.arrayWithLayers(layers)
     )

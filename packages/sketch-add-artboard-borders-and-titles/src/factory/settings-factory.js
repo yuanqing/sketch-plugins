@@ -3,7 +3,7 @@ import {
   saveSettings
 } from '@sketch-plugin-helper/settings'
 import { showSuccessMessage } from '@sketch-plugin-helper/utilities'
-import defaultSettings from '../default-settings'
+import { defaultSettings } from '../settings'
 
 export default function settingsFactory (title, formFields) {
   return function () {
