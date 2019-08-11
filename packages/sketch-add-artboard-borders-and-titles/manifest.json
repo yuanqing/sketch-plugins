@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Add Artboard Borders and Titles",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-add-artboard-borders-and-titles/.appcast.xml",
   "identifier": "sg.yuanqing.add-artboard-borders-and-titles",
   "commands": [
     {
