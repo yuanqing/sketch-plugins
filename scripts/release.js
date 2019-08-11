@@ -4,6 +4,7 @@ const ora = require('ora')
 const { join } = require('path')
 const { json2xml, xml2json } = require('xml-js')
 
+const readmeFileName = 'README.md'
 const appcastXmlFileName = '.appcast.xml'
 const zipFileName = 'plugin.zip'
 
@@ -49,11 +50,21 @@ async function release (type) {
   )
   log.succeed('Updated .appcast.xml version')
 
+  // Update `README.md` version
+  log.start('Updating README.md version')
+  await updateReadmeVersion(name, newVersion)
+  log.succeed('Updated README.md version')
+
   // Commit changes, tag, and push
   log.start(
-    `Committing package.json and .appcast.xml, creating Git tag ${gitTagName}`
+    `Committing package.json, .appcast.xml, README.md, creating Git tag ${gitTagName}`
   )
-  await execa('git', ['add', 'package.json', appcastXmlFileName])
+  await execa('git', [
+    'add',
+    'package.json',
+    appcastXmlFileName,
+    readmeFileName
+  ])
   await execa('git', ['commit', '--message', gitTagName])
   await execa('git', ['tag', '--annotate', gitTagName, '--message', gitTagName])
   log.start('Pushing changes')
@@ -129,4 +140,14 @@ function createAppcastItem (
       }
     ]
   }
+}
+
+async function updateReadmeVersion (name, version) {
+  const readmeFilePath = join(process.cwd(), readmeFileName)
+  const readme = await readFile(readmeFilePath, 'utf8')
+  const result = readme.replace(
+    new RegExp(`${name}-[\\d.]+`),
+    `${name}-${version}`
+  )
+  return outputFile(readmeFilePath, result)
 }
