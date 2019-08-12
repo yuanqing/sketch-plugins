@@ -1,6 +1,6 @@
 # Select Layers [![npm Version](https://img.shields.io/npm/v/sketch-select-layers)](https://www.npmjs.com/package/sketch-select-layers)
 
-> A Sketch plugin to create or filter a selection of layers based on name, type or similarity
+> A Sketch plugin to select layers based on name, type or similarity
 
 ![Dialog](media/dialog.png)
 
