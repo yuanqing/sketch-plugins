@@ -37,7 +37,7 @@
       "name": "Space Layers in Group Left",
       "identifier": "sg.yuanqing.move-layers.space-layers-in-group-left",
       "script": "src/space-layers-in-group.js",
-      "handler": "spaceLayersInGroup"
+      "handler": "spaceLayersInGroupLeft"
     },
     {
       "name": "Space Layers in Group Right",
