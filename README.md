@@ -1,4 +1,4 @@
-# Sketch Plugins
+# Sketch Plugins [![Build Status](https://img.shields.io/travis/yuanqing/sketch-plugins.svg)](https://travis-ci.org/yuanqing/sketch-plugins)
 
 Name | Description
 :--|:--
