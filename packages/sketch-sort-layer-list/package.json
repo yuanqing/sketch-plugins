@@ -1,0 +1,35 @@
+{
+  "name": "sketch-sort-layer-list",
+  "version": "0.5.0",
+  "description": "A Sketch plugin to sort the layer list by name or layer position",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-sort-layer-list"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "fix": "prettier-standard 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.js'",
+    "release": "node ../../scripts/release.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "dependencies": {
+    "natural-compare-lite": "^1.4.0"
+  },
+  "skpm": {
+    "main": "Sort Layer List.sketchplugin"
+  }
+}

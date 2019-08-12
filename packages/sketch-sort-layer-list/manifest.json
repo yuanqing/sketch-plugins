@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Sort Layer List",
+  "identifier": "sg.yuanqing.sort-layer-list",
+  "commands": [
+    {
+      "name": "Sort Selected Layers By Name",
+      "identifier": "sg.yuanqing.sort-layer-list.sort-selected-layers-by-name",
+      "script": "src/attributes/name.js",
+      "handler": "sortSelectedLayersByName"
+    },
+    {
+      "name": "Sort Selected Layers By X Position",
+      "identifier": "sg.yuanqing.sort-layer-list.sort-selected-layers-by-x-position",
+      "script": "src/attributes/x-position.js",
+      "handler": "sortSelectedLayersByXPosition"
+    },
+    {
+      "name": "Sort Selected Layers By Y Position",
+      "identifier": "sg.yuanqing.sort-layer-list.sort-selected-layers-by-y-position",
+      "script": "src/attributes/y-position.js",
+      "handler": "sortSelectedLayersByYPosition"
+    },
+    {
+      "name": "Sort Selected Layers By Y and X Position",
+      "identifier": "sg.yuanqing.sort-layer-list.sort-selected-layers-by-y-x-position",
+      "script": "src/attributes/y-x-position.js",
+      "handler": "sortSelectedLayersByYXPosition"
+    },
+    {
+      "name": "Smart Sort Selected Layers",
+      "identifier": "sg.yuanqing.sort-layer-list.smart-sort-selected-layers",
+      "script": "src/attributes/smart-sort.js",
+      "handler": "smartSortSelectedLayers"
+    }
+  ],
+  "menu": {
+    "title": "Sort Layer List",
+    "items": [
+      "sg.yuanqing.sort-layer-list.sort-selected-layers-by-name",
+      "-",
+      "sg.yuanqing.sort-layer-list.sort-selected-layers-by-x-position",
+      "sg.yuanqing.sort-layer-list.sort-selected-layers-by-y-position",
+      "sg.yuanqing.sort-layer-list.sort-selected-layers-by-y-x-position",
+      "-",
+      "sg.yuanqing.sort-layer-list.smart-sort-selected-layers"
+    ]
+  }
+}
