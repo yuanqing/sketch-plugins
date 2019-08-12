@@ -9,7 +9,7 @@
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-find-and-replace-text-0.0.4/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-find-and-replace-text-0.1.0/plugin.zip)
 2. Double-click `Find and Replace Text.sketchplugin` to install
 
 ## License
