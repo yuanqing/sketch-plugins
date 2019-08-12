@@ -20,6 +20,8 @@
   "scripts": {
     "build": "yarn run clean && skpm-build --manifest manifest.json",
     "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "fix": "prettier-standard 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.js'",
     "release": "node ../../scripts/release.js",
     "symlink": "skpm-link",
     "watch": "yarn run build --watch"
