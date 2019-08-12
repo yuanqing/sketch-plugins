@@ -1,0 +1,32 @@
+{
+  "name": "sketch-find-and-replace-text",
+  "version": "0.0.4",
+  "description": "A Sketch plugin to find and replace text in text layers and symbol instances",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-find-and-replace-text"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "fix": "prettier-standard 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.js'",
+    "release": "node ../../scripts/release.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "skpm": {
+    "main": "Find and Replace Text.sketchplugin"
+  }
+}

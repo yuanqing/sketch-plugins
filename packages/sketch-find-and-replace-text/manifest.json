@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Find and Replace Text",
+  "identifier": "sg.yuanqing.find-and-replace-text",
+  "commands": [
+    {
+      "name": "Find and Replace Text",
+      "identifier": "sg.yuanqing.find-and-replace-text.find-and-replace-text",
+      "script": "src/find-and-replace-text/find-and-replace-text.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.find-and-replace-text.reset-settings",
+      "script": "src/settings.js",
+      "handler": "resetSettings"
+    }
+  ],
+  "menu": {
+    "title": "Find and Replace Text",
+    "items": [
+      "sg.yuanqing.find-and-replace-text.find-and-replace-text",
+      "-",
+      "sg.yuanqing.find-and-replace-text.reset-settings"
+    ]
+  }
+}
