@@ -5,12 +5,12 @@ export const defaultSettings = {
     snapToGrid: false,
     gridHeight: 200,
     gridWidth: 200,
-    whitelistRegularExpression: '^@'
+    whitelistRegex: '^@'
   },
   alignLayersToArtboardGrid: {
     snapToGrid: false,
     gridSize: 10,
-    whitelistRegularExpression: '^@'
+    whitelistRegex: '^@'
   }
 }
 

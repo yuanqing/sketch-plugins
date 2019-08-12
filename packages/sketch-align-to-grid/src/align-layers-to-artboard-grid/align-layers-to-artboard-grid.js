@@ -10,13 +10,8 @@ import roundDown from '../round-down'
 import { getSettings } from '../settings/settings'
 
 export default function alignLayersToArtboardGrid ({ isAction, layers }) {
-  const {
-    gridSize,
-    whitelistRegularExpression
-  } = getSettings().alignLayersToArtboardGrid
-  const regularExpression = whitelistRegularExpression
-    ? new RegExp(whitelistRegularExpression)
-    : null
+  const { gridSize, whitelistRegex } = getSettings().alignLayersToArtboardGrid
+  const regex = whitelistRegex ? new RegExp(whitelistRegex) : null
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0
   layers = layers || (hasSelection ? selectedLayers : getLayersOnCurrentPage())
@@ -25,7 +20,7 @@ export default function alignLayersToArtboardGrid ({ isAction, layers }) {
       layer.type === 'Artboard' ||
       layer.type === 'Group' ||
       !layer.getParentArtboard() ||
-      (regularExpression && regularExpression.test(layer.name))
+      (regex && regex.test(layer.name))
     ) {
       return
     }

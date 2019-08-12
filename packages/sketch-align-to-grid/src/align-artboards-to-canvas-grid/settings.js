@@ -16,7 +16,7 @@ const formFields = [
     label: 'Grid height'
   }),
   textBox({
-    key: 'alignArtboardsToCanvasGrid.whitelistRegularExpression',
+    key: 'alignArtboardsToCanvasGrid.whitelistRegex',
     label: 'Whitelist regular expression'
   }),
   checkBox({

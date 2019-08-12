@@ -9,22 +9,22 @@ export default function alignArtboardsToCanvasGrid ({ isAction }) {
   const {
     gridHeight,
     gridWidth,
-    whitelistRegularExpression
+    whitelistRegex
   } = getSettings().alignArtboardsToCanvasGrid
-  const layers = getArtboards(whitelistRegularExpression)
+  const layers = getArtboards(whitelistRegex)
   arrangeOnGrid(layers, gridWidth, gridHeight)
   if (!isAction) {
     showSuccessMessage('Aligned artboards to canvas grid')
   }
 }
 
-function getArtboards (whitelistRegularExpression) {
+function getArtboards (whitelistRegex) {
   const artboards = getArtboardsOnCurrentPage()
-  if (!whitelistRegularExpression) {
+  if (!whitelistRegex) {
     return artboards
   }
-  const regularExpression = new RegExp(whitelistRegularExpression)
+  const regex = new RegExp(whitelistRegex)
   return artboards.filter(function (artboard) {
-    return !regularExpression.test(artboard.name)
+    return !regex.test(artboard.name)
   })
 }

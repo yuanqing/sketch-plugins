@@ -12,7 +12,7 @@ const formFields = [
     label: 'Grid size'
   }),
   textBox({
-    key: 'alignLayersToArtboardGrid.whitelistRegularExpression',
+    key: 'alignLayersToArtboardGrid.whitelistRegex',
     label: 'Whitelist regular expression'
   }),
   checkBox({
