@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Move Layers",
+  "identifier": "sg.yuanqing.move-layers",
+  "commands": [
+    {
+      "name": "Move Selected Layers",
+      "identifier": "sg.yuanqing.move-layers.move-selected-layers",
+      "script": "src/move-selected-layers.js",
+      "handler": "moveSelectedLayers"
+    },
+    {
+      "name": "Space Selected Layers Left",
+      "identifier": "sg.yuanqing.move-layers.space-selected-layers-left",
+      "script": "src/space-selected-layers.js",
+      "handler": "spaceSelectedLayersLeft"
+    },
+    {
+      "name": "Space Selected Layers Right",
+      "identifier": "sg.yuanqing.move-layers.space-selected-layers-right",
+      "script": "src/space-selected-layers.js",
+      "handler": "spaceSelectedLayersRight"
+    },
+    {
+      "name": "Space Selected Layers Up",
+      "identifier": "sg.yuanqing.move-layers.space-selected-layers-up",
+      "script": "src/space-selected-layers.js",
+      "handler": "spaceSelectedLayersUp"
+    },
+    {
+      "name": "Space Selected Layers Down",
+      "identifier": "sg.yuanqing.move-layers.space-selected-layers-down",
+      "script": "src/space-selected-layers.js",
+      "handler": "spaceSelectedLayersDown"
+    },
+    {
+      "name": "Space Layers in Group Left",
+      "identifier": "sg.yuanqing.move-layers.space-layers-in-group-left",
+      "script": "src/space-layers-in-group.js",
+      "handler": "spaceLayersInGroup"
+    },
+    {
+      "name": "Space Layers in Group Right",
+      "identifier": "sg.yuanqing.move-layers.space-layers-in-group-right",
+      "script": "src/space-layers-in-group.js",
+      "handler": "spaceLayersInGroupRight"
+    },
+    {
+      "name": "Space Layers in Group Up",
+      "identifier": "sg.yuanqing.move-layers.space-layers-in-group-up",
+      "script": "src/space-layers-in-group.js",
+      "handler": "spaceLayersInGroupUp"
+    },
+    {
+      "name": "Space Layers in Group Down",
+      "identifier": "sg.yuanqing.move-layers.space-layers-in-group-down",
+      "script": "src/space-layers-in-group.js",
+      "handler": "spaceLayersInGroupDown"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.move-layers.reset-settings",
+      "script": "src/settings.js",
+      "handler": "resetSettings"
+    }
+  ],
+  "menu": {
+    "title": "Move Layers",
+    "items": [
+      "sg.yuanqing.move-layers.move-selected-layers",
+      "-",
+      "sg.yuanqing.move-layers.space-selected-layers-left",
+      "sg.yuanqing.move-layers.space-selected-layers-right",
+      "sg.yuanqing.move-layers.space-selected-layers-up",
+      "sg.yuanqing.move-layers.space-selected-layers-down",
+      "-",
+      "sg.yuanqing.move-layers.space-layers-in-group-left",
+      "sg.yuanqing.move-layers.space-layers-in-group-right",
+      "sg.yuanqing.move-layers.space-layers-in-group-up",
+      "sg.yuanqing.move-layers.space-layers-in-group-down",
+      "-",
+      "sg.yuanqing.move-layers.reset-settings"
+    ]
+  }
+}
