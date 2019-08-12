@@ -1,6 +1,6 @@
 {
   "name": "sketch-align-to-grid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Sketch plugin to align artboards and layers to a grid",
   "keywords": [
     "sketch",
