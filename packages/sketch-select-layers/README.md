@@ -36,7 +36,7 @@
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-select-layers-0.6.0/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-select-layers-0.7.0/plugin.zip)
 2. Double-click `Select Layers.sketchplugin` to install
 
 ## License
