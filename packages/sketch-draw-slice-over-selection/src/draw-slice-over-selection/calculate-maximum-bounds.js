@@ -1,6 +1,6 @@
 import { calculateCoordinatesRelativeToPage } from '@sketch-plugin-helper/utilities'
 
-export default function calculateMaximumBounds (layers) {
+export function calculateMaximumBounds (layers) {
   let maximumBounds = [
     {
       x: Number.MAX_VALUE,

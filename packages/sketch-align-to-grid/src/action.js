@@ -1,9 +1,9 @@
 import { fromNative } from 'sketch'
-import alignLayersToArtboardGrid from './align-layers-to-artboard-grid/align-layers-to-artboard-grid'
-import alignArtboardsToCanvasGrid from './align-artboards-to-canvas-grid/align-artboards-to-canvas-grid'
+import { alignLayersToArtboardGrid } from './align-layers-to-artboard-grid/align-layers-to-artboard-grid'
+import { alignArtboardsToCanvasGrid } from './align-artboards-to-canvas-grid/align-artboards-to-canvas-grid'
 import { getSettings } from './settings/settings'
 
-export default function action ({ actionContext }) {
+export function action ({ actionContext }) {
   const settings = getSettings()
   const layers = collectLayersInArtboards(actionContext.layers)
   const hasArtboard = actionContext.layers.length > layers.length

@@ -1,5 +1,5 @@
 import { numericTextBox, textBox } from '@sketch-plugin-helper/settings'
-import settingsFactory from '../factory/settings-factory'
+import { openSettingsDialogFactory } from '../factory/open-settings-dialog-factory'
 
 const title = 'Settings for Add Artboard Titles'
 const formFields = [
@@ -21,4 +21,4 @@ const formFields = [
   })
 ]
 
-export default settingsFactory(title, formFields)
+export const openSettingsDialog = openSettingsDialogFactory(title, formFields)

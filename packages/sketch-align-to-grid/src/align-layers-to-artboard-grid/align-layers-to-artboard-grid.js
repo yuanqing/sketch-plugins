@@ -6,10 +6,10 @@ import {
   iterateChildLayers,
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
-import roundDown from '../round-down'
+import { roundDown } from '../round-down'
 import { getSettings } from '../settings/settings'
 
-export default function alignLayersToArtboardGrid ({ isAction, layers }) {
+export function alignLayersToArtboardGrid ({ isAction, layers }) {
   const { gridSize, whitelistRegex } = getSettings().alignLayersToArtboardGrid
   const regex = whitelistRegex ? new RegExp(whitelistRegex) : null
   const selectedLayers = getSelectedLayers()

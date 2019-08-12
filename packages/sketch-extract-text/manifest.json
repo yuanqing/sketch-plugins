@@ -6,7 +6,8 @@
     {
       "name": "Extract Text",
       "identifier": "sg.yuanqing.extract-text.extract-text",
-      "script": "src/extract-text/extract-text.js"
+      "script": "src/extract-text/extract-text.js",
+      "handler": "extractText"
     },
     {
       "name": "Reset Settings",

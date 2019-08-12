@@ -1,6 +1,6 @@
 import {
   numericTextBox,
-  openSettingsDialog,
+  openSettingsDialog as openSettingsDialogHelper,
   saveSettings,
   textBox
 } from '@sketch-plugin-helper/settings'
@@ -19,8 +19,8 @@ const formFields = [
   })
 ]
 
-export default function () {
-  const settings = openSettingsDialog(title, formFields, defaultSettings)
+export function openSettingsDialog () {
+  const settings = openSettingsDialogHelper(title, formFields, defaultSettings)
   if (settings) {
     saveSettings(settings)
     showSuccessMessage('Saved settings')

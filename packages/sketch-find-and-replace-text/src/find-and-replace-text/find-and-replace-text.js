@@ -14,7 +14,7 @@ import {
   showMessage,
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
-import replaceTextInLayer from './replace-text-in-layer'
+import { replaceTextInLayer } from './replace-text-in-layer'
 import { defaultSettings } from '../settings'
 
 const scopeMessage = {
@@ -23,7 +23,7 @@ const scopeMessage = {
   'Entire document': 'across the entire document'
 }
 
-export default function findAndReplaceText () {
+export function findAndReplaceText () {
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length !== 0
   const title = 'Find and Replace Text'

@@ -6,7 +6,8 @@
     {
       "name": "Find and Replace Text",
       "identifier": "sg.yuanqing.find-and-replace-text.find-and-replace-text",
-      "script": "src/find-and-replace-text/find-and-replace-text.js"
+      "script": "src/find-and-replace-text/find-and-replace-text.js",
+      "handler": "findAndReplaceText"
     },
     {
       "name": "Reset Settings",

@@ -6,10 +6,10 @@ import {
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
 import { getSettings } from '../settings/settings'
-import calculateMaximumBounds from './calculate-maximum-bounds'
-import createSliceLayer from './create-slice-layer'
+import { calculateMaximumBounds } from './calculate-maximum-bounds'
+import { createSliceLayer } from './create-slice-layer'
 
-export default function drawSliceOverSelection () {
+export function drawSliceOverSelection () {
   const settings = getSettings()
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length > 0

@@ -1,4 +1,4 @@
-export default {
+export const replaceTextInLayer = {
   SymbolInstance: replaceTextInSymbolInstance,
   Text: replaceTextInTextLayer
 }

@@ -3,9 +3,9 @@ import {
   saveSettings
 } from '@sketch-plugin-helper/settings'
 import { showSuccessMessage } from '@sketch-plugin-helper/utilities'
-import { defaultSettings } from './settings'
+import { defaultSettings } from '../settings'
 
-export default function settingsFactory (title, formFields) {
+export function openSettingsDialogFactory (title, formFields) {
   return function () {
     const settings = openSettingsDialog(title, formFields, defaultSettings)
     if (settings) {

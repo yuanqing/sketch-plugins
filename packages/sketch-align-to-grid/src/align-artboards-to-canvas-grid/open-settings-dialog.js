@@ -3,7 +3,7 @@ import {
   numericTextBox,
   textBox
 } from '@sketch-plugin-helper/settings'
-import settingsFactory from '../settings/settings-factory'
+import { openSettingsDialogFactory } from '../settings/open-settings-dialog-factory'
 
 const title = 'Settings for Canvas Grid'
 const formFields = [
@@ -25,4 +25,4 @@ const formFields = [
   })
 ]
 
-export default settingsFactory(title, formFields)
+export const openSettingsDialog = openSettingsDialogFactory(title, formFields)

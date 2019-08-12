@@ -1,4 +1,4 @@
-export default function saveToClipboard (string) {
+export function saveToClipboard (string) {
   const pasteBoard = NSPasteboard.generalPasteboard()
   pasteBoard.clearContents()
   pasteBoard.setString_forType(

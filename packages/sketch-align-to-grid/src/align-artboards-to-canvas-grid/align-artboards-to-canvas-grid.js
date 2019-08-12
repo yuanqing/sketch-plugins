@@ -2,10 +2,10 @@ import {
   getArtboardsOnCurrentPage,
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
-import arrangeOnGrid from './arrange-on-grid'
+import { arrangeOnGrid } from './arrange-on-grid'
 import { getSettings } from '../settings/settings'
 
-export default function alignArtboardsToCanvasGrid ({ isAction }) {
+export function alignArtboardsToCanvasGrid ({ isAction }) {
   const {
     gridHeight,
     gridWidth,

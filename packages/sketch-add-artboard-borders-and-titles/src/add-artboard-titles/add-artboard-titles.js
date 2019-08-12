@@ -1,6 +1,6 @@
-import implementationFactory from '../factory/implementation-factory'
+import { implementationFactory } from '../factory/implementation-factory'
 
-export default implementationFactory({
+export const addArtboardTitles = implementationFactory({
   mapArtboards,
   groupName: '@ArtboardTitles',
   settingsKey: 'addArtboardTitles',

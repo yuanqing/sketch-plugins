@@ -6,12 +6,14 @@
     {
       "name": "Draw Slice Over Selection",
       "identifier": "sg.yuanqing.draw-slice-over-selection.draw-slice-over-selection",
-      "script": "src/draw-slice-over-selection/draw-slice-over-selection.js"
+      "script": "src/draw-slice-over-selection/draw-slice-over-selection.js",
+      "handler": "drawSliceOverSelection"
     },
     {
       "name": "Settings",
       "identifier": "sg.yuanqing.draw-slice-over-selection.settings",
-      "script": "src/settings/open-settings-dialog.js"
+      "script": "src/settings/open-settings-dialog.js",
+      "handler": "openSettingsDialog"
     },
     {
       "name": "Reset Settings",

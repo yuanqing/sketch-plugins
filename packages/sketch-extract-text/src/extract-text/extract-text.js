@@ -14,11 +14,11 @@ import {
   showSuccessMessage
 } from '@sketch-plugin-helper/utilities'
 import { defaultSettings } from '../settings'
-import filterTextLayersByRegex from './filter-text-layers-by-regex'
-import findAllTextLayers from './find-all-text-layers'
-import saveToClipboard from './save-to-clipboard'
+import { filterTextLayersByRegex } from './filter-text-layers-by-regex'
+import { findAllTextLayers } from './find-all-text-layers'
+import { saveToClipboard } from './save-to-clipboard'
 
-export default function extractText () {
+export function extractText () {
   const selectedLayers = getSelectedLayers()
   const hasSelection = selectedLayers.length !== 0
   const title = 'Extract Text'

@@ -7,7 +7,7 @@ import {
 } from '@sketch-plugin-helper/utilities'
 import { getSettings } from '../settings'
 
-export default function implementationFactory ({
+export function implementationFactory ({
   mapArtboards,
   groupName,
   settingsKey,

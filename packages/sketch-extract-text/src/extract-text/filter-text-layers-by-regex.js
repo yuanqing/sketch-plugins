@@ -1,4 +1,4 @@
-export default function filterTextLayersByRegex (
+export function filterTextLayersByRegex (
   textLayers,
   regex,
   shouldMatchLayerContent

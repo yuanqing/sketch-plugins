@@ -7,22 +7,26 @@
     {
       "name": "Align Artboards to Canvas Grid",
       "identifier": "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid",
-      "script": "src/align-artboards-to-canvas-grid/align-artboards-to-canvas-grid.js"
+      "script": "src/align-artboards-to-canvas-grid/align-artboards-to-canvas-grid.js",
+      "handler": "alignArtboardsToCanvasGrid"
     },
     {
       "name": "Settings for Canvas Grid",
       "identifier": "sg.yuanqing.align-to-grid.align-artboards-to-canvas-grid-settings",
-      "script": "src/align-artboards-to-canvas-grid/settings.js"
+      "script": "src/align-artboards-to-canvas-grid/open-settings-dialog.js",
+      "handler": "openSettingsDialog"
     },
     {
       "name": "Align Layers to Artboard Grid",
       "identifier": "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid",
-      "script": "src/align-layers-to-artboard-grid/align-layers-to-artboard-grid.js"
+      "script": "src/align-layers-to-artboard-grid/align-layers-to-artboard-grid.js",
+      "handler": "alignLayersToArtboardGrid"
     },
     {
       "name": "Settings for Artboard Grid",
       "identifier": "sg.yuanqing.align-to-grid.align-layers-to-artboard-grid-settings",
-      "script": "src/align-layers-to-artboard-grid/settings.js"
+      "script": "src/align-layers-to-artboard-grid/open-settings-dialog.js",
+      "handler": "openSettingsDialog"
     },
     {
       "name": "Reset Settings",
@@ -36,7 +40,7 @@
       "script": "src/action.js",
       "handlers": {
         "actions": {
-          "LayersMoved.finish": "default"
+          "LayersMoved.finish": "action"
         }
       }
     },
@@ -46,7 +50,7 @@
       "script": "src/action.js",
       "handlers": {
         "actions": {
-          "LayersResized.finish": "default"
+          "LayersResized.finish": "action"
         }
       }
     }
