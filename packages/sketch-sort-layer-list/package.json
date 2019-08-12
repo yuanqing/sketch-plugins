@@ -27,6 +27,8 @@
     "watch": "yarn run build --watch"
   },
   "dependencies": {
+    "@sketch-plugin-helper/settings": "^2.0.0",
+    "@sketch-plugin-helper/utilities": "^2.0.0",
     "natural-compare-lite": "^1.4.0"
   },
   "skpm": {

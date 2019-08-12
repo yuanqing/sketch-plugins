@@ -1542,6 +1542,18 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@sketch-plugin-helper/settings@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sketch-plugin-helper/settings/-/settings-2.0.0.tgz#b8e087156caa73248783883e3862b9cd59b57b56"
+  integrity sha512-seCrB2DMQBdFt9P6IMQMT419yKzliN5hflhllL7qLLOG///eQJW8NloKNJQX8Mz3PbUZgQaqXKrSYXw8cHXSdA==
+  dependencies:
+    "@sketch-plugin-helper/utilities" "^2.0.0"
+
+"@sketch-plugin-helper/utilities@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sketch-plugin-helper/utilities/-/utilities-2.0.0.tgz#ba53b1714056e5c62a50142ee6a4d461f8ecda2e"
+  integrity sha512-gyH251eIo3/HuhnAvF939IMj3Qg5O8YZVD+/sFAsgx85mhHENU1uTq9Xaua4LhAhNbP4mpj46o2HWrjzBszCig==
+
 "@skpm/babel-preset@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@skpm/babel-preset/-/babel-preset-0.2.1.tgz#1e0404e058514d72adebe98163b69b0bb1d737e4"

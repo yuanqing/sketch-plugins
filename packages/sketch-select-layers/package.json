@@ -26,6 +26,10 @@
     "symlink": "skpm-link",
     "watch": "yarn run build --watch"
   },
+  "dependencies": {
+    "@sketch-plugin-helper/settings": "^2.0.0",
+    "@sketch-plugin-helper/utilities": "^2.0.0"
+  },
   "skpm": {
     "main": "Select Layers.sketchplugin"
   }
