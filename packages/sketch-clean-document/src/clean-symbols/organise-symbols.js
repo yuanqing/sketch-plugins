@@ -90,5 +90,5 @@ function sortLayerList (symbolGroups) {
       layers.push(layer)
     })
   })
-  updateLayerList({ sortedLayers: layers, shouldSelectLayers: false })
+  updateLayerList(layers, false)
 }

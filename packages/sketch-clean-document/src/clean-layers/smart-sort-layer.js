@@ -8,6 +8,6 @@ export function smartSortLayer (layer) {
       return
     }
     const sortedLayers = smartSortLayers(layers)
-    updateLayerList({ sortedLayers, shouldSelectLayers: false })
+    updateLayerList(sortedLayers, false)
   }
 }
