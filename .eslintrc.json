@@ -2,5 +2,9 @@
   "extends": [
     "sketch",
     "standard"
-  ]
+  ],
+  "globals": {
+    "CGPointMake": "readonly",
+    "NSStringPboardType": "readonly"
+  }
 }
