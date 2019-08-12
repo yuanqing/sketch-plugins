@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Extract Text",
+  "identifier": "sg.yuanqing.extract-text",
+  "commands": [
+    {
+      "name": "Extract Text",
+      "identifier": "sg.yuanqing.extract-text.extract-text",
+      "script": "src/extract-text/extract-text.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.extract-text.reset-settings",
+      "script": "src/settings.js",
+      "handler": "resetSettings"
+    }
+  ],
+  "menu": {
+    "title": "Extract Text",
+    "items": [
+      "sg.yuanqing.extract-text.extract-text",
+      "-",
+      "sg.yuanqing.extract-text.reset-settings"
+    ]
+  }
+}
