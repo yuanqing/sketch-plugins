@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Draw Slice Over Selection",
+  "identifier": "sg.yuanqing.draw-slice-over-selection",
+  "commands": [
+    {
+      "name": "Draw Slice Over Selection",
+      "identifier": "sg.yuanqing.draw-slice-over-selection.draw-slice-over-selection",
+      "script": "src/draw-slice-over-selection/draw-slice-over-selection.js"
+    },
+    {
+      "name": "Settings",
+      "identifier": "sg.yuanqing.draw-slice-over-selection.settings",
+      "script": "src/settings/open-settings-dialog.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.draw-slice-over-selection.reset-settings",
+      "script": "src/settings/settings.js",
+      "handler": "resetSettings"
+    }
+  ],
+  "menu": {
+    "title": "Draw Slice Over Selection",
+    "items": [
+      "sg.yuanqing.draw-slice-over-selection.draw-slice-over-selection",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "sg.yuanqing.draw-slice-over-selection.settings",
+          "-",
+          "sg.yuanqing.draw-slice-over-selection.reset-settings"
+        ]
+      }
+    ]
+  }
+}

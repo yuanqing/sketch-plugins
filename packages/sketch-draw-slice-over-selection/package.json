@@ -1,0 +1,30 @@
+{
+  "name": "sketch-draw-slice-over-selection",
+  "version": "0.8.0",
+  "description": "A Sketch plugin to draw a slice over the selection",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-draw-slice-over-selection"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "release": "node ../../scripts/release.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "skpm": {
+    "main": "Draw Slice Over Selection.sketchplugin"
+  }
+}
