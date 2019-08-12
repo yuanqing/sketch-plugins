@@ -1,0 +1,32 @@
+{
+  "name": "sketch-select-layers",
+  "version": "0.6.0",
+  "description": "A Sketch plugin to create or filter a selection of layers based on name, type or similarity",
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yuanqing/sketch-plugins.git",
+    "directory": "packages/sketch-select-layers"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "yarn run clean && skpm-build --manifest manifest.json",
+    "clean": "rimraf '*.sketchplugin' plugin.zip",
+    "fix": "prettier-standard 'src/**/*.js'",
+    "lint": "eslint 'src/**/*.js'",
+    "release": "node ../../scripts/release.js",
+    "symlink": "skpm-link",
+    "watch": "yarn run build --watch"
+  },
+  "skpm": {
+    "main": "Select Layers.sketchplugin"
+  }
+}
