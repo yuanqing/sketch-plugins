@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Clean Document",
+  "identifier": "sg.yuanqing.clean-document",
+  "commands": [
+    {
+      "name": "Clean Document",
+      "identifier": "sg.yuanqing.clean-document.clean-document",
+      "script": "src/clean-document.js"
+    },
+    {
+      "name": "Clean Layers",
+      "identifier": "sg.yuanqing.clean-document.clean-layers",
+      "script": "src/clean-layers/clean-layers.js"
+    },
+    {
+      "name": "Clean Symbols",
+      "identifier": "sg.yuanqing.clean-document.clean-symbols",
+      "script": "src/clean-symbols/clean-symbols.js"
+    },
+    {
+      "name": "Clean Styles",
+      "identifier": "sg.yuanqing.clean-document.clean-styles",
+      "script": "src/clean-styles/clean-styles.js"
+    },
+    {
+      "name": "Clean Pages",
+      "identifier": "sg.yuanqing.clean-document.clean-pages",
+      "script": "src/clean-pages/clean-pages.js"
+    },
+    {
+      "name": "Settings",
+      "identifier": "sg.yuanqing.clean-document.settings",
+      "script": "src/settings/open-settings-dialog.js"
+    },
+    {
+      "name": "Reset Settings",
+      "identifier": "sg.yuanqing.clean-document.reset-settings",
+      "script": "src/settings/settings.js",
+      "handler": "resetSettings"
+    }
+  ],
+  "menu": {
+    "title": "Clean Document",
+    "items": [
+      "sg.yuanqing.clean-document.clean-document",
+      "-",
+      "sg.yuanqing.clean-document.clean-layers",
+      "sg.yuanqing.clean-document.clean-symbols",
+      "sg.yuanqing.clean-document.clean-styles",
+      "sg.yuanqing.clean-document.clean-pages",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "sg.yuanqing.clean-document.settings",
+          "-",
+          "sg.yuanqing.clean-document.reset-settings"
+        ]
+      }
+    ]
+  }
+}
