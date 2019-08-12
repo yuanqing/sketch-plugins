@@ -1,6 +1,6 @@
 {
   "name": "sketch-extract-text",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "A Sketch plugin to extract text from layers that match a regular expression",
   "keywords": [
     "sketch",
