@@ -18,7 +18,7 @@
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-move-layers-0.5.0/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-move-layers-0.5.1/plugin.zip)
 2. Double-click `Move Layers.sketchplugin` to install
 
 ## License
