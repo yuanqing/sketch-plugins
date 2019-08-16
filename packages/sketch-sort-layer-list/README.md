@@ -23,7 +23,7 @@
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-sort-layer-list-0.6.0/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-sort-layer-list-0.6.1/plugin.zip)
 2. Double-click `Sort Layer List.sketchplugin` to install
 
 ## License
