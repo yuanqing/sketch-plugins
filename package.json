@@ -5,6 +5,7 @@
     "clean": "rimraf '*.log' 'packages/*/*.sketchplugin'",
     "fix": "prettier-standard 'packages/*/src/**/*.js' 'scripts/**/*.js'",
     "lint": "eslint 'packages/*/src/**/*.js' 'scripts/**/*.js'",
+    "release-all-patch": "lerna run release --concurrency 1 -- patch",
     "reset": "yarn run clean && lerna clean --yes && rimraf yarn.lock node_modules && yarn install",
     "symlink": "lerna run symlink",
     "watch": "lerna run watch"
