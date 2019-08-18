@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Move Layers",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-move-layers/.appcast.xml",
   "identifier": "sg.yuanqing.move-layers",
   "commands": [
     {

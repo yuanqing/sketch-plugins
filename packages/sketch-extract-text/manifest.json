@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Extract Text",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-extract-text/.appcast.xml",
   "identifier": "sg.yuanqing.extract-text",
   "commands": [
     {

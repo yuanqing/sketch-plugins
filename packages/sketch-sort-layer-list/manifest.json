@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Sort Layer List",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-sort-layer-list/.appcast.xml",
   "identifier": "sg.yuanqing.sort-layer-list",
   "commands": [
     {

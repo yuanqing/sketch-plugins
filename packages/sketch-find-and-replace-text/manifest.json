@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Find and Replace Text",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-plugins/master/packages/sketch-find-and-replace-text/.appcast.xml",
   "identifier": "sg.yuanqing.find-and-replace-text",
   "commands": [
     {
