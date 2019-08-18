@@ -1,6 +1,6 @@
 {
   "name": "sketch-select-layers",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "A Sketch plugin to select layers based on name, type or similarity",
   "keywords": [
     "sketch",
