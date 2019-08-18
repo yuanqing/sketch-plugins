@@ -19,7 +19,7 @@ Padding (pixels) | `100`
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-draw-slice-over-selection-0.9.1/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-draw-slice-over-selection-0.9.2/plugin.zip)
 2. Double-click `Draw Slice Over Selection.sketchplugin` to install
 
 ## License
