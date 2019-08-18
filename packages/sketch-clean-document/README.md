@@ -35,7 +35,7 @@
 
 ## Installation
 
-1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-clean-document-0.1.1/plugin.zip)
+1. [Download and unzip the latest release](https://github.com/yuanqing/sketch-plugins/releases/download/sketch-clean-document-0.1.2/plugin.zip)
 2. Double-click `Clean Document.sketchplugin` to install
 
 ## License
