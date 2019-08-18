@@ -1,6 +1,6 @@
 {
   "name": "sketch-find-and-replace-text",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Sketch plugin to find and replace text in text layers and symbol instances",
   "keywords": [
     "sketch",
